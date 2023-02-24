@@ -1037,7 +1037,7 @@ interface ButtonProps extends ComponentProps<typeof Button> {
     as?: ElementType;
 }
 
-declare const Input: _stitches_react_types_styled_component.StyledComponent<"input", {}, {}, _stitches_react_types_css_util.CSS<{}, {
+declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"textarea", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
         white: string;
         black: string;
@@ -1238,10 +1238,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-
-interface TextInputProps extends ComponentProps<typeof Input> {
-    prefix?: string;
+interface TextAreaProps extends ComponentProps<typeof TextArea> {
 }
-declare function TextInput({ prefix, ...props }: TextInputProps): JSX.Element;
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Heading, HeadingProps, Text, TextInput, TextInputProps, TextProps };
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Heading, HeadingProps, Text, TextArea, TextAreaProps, TextProps };

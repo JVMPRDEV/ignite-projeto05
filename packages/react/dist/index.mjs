@@ -21,18 +21,6 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-var __objRest = (source, exclude) => {
-  var target = {};
-  for (var prop in source)
-    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-      target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-        target[prop] = source[prop];
-    }
-  return target;
-};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -3131,11 +3119,11 @@ var require_react_jsx_runtime_development = __commonJS({
             return jsxWithValidation(type, props, key, false);
           }
         }
-        var jsx3 = jsxWithValidationDynamic;
-        var jsxs3 = jsxWithValidationStatic;
+        var jsx2 = jsxWithValidationDynamic;
+        var jsxs2 = jsxWithValidationStatic;
         exports.Fragment = REACT_FRAGMENT_TYPE;
-        exports.jsx = jsx3;
-        exports.jsxs = jsxs3;
+        exports.jsx = jsx2;
+        exports.jsxs = jsxs2;
       })();
     }
   }
@@ -3426,64 +3414,38 @@ var Button = styled("button", {
   }
 });
 
-// src/components/TextInput/styles.ts
-var TextInputContainer = styled("div", {
+// src/components/TextArea.tsx
+var TextArea = styled("textarea", {
   backgroundColor: "$gray900",
   padding: "$3 $4",
   borderRadius: "$sm",
   boxSizing: "border-box",
   border: "2px solid $gray900",
-  display: "flex",
-  alignItems: "baseline",
-  "&:has(input:focus)": {
-    borderColor: "$ignite300"
-  },
-  "&:has(input:disabled)": {
-    opacity: 0.5,
-    cursor: "not-allowed"
-  }
-});
-var Prefix = styled("span", {
-  fontFamily: "$default",
-  fontSize: "$sm",
-  color: "$gray400",
-  fontWeight: "$regular"
-});
-var Input = styled("input", {
   fontFamily: "$default",
   fontSize: "$sm",
   color: "$white",
   fontWeight: "$regular",
-  backgroundColor: "transparent",
-  border: 0,
-  width: "100%",
+  resize: "vertical",
+  minHeight: 80,
   "&:focus": {
-    outline: 0
+    outline: 0,
+    borderColor: "$ignite300"
   },
   "&:disabled": {
+    outline: 0.5,
     cursor: "not-allowed"
   },
   "&:placeholder": {
     color: "$gray400"
   }
 });
-
-// src/components/TextInput/index.tsx
-var import_jsx_runtime2 = __toESM(require_jsx_runtime());
-function TextInput(_a) {
-  var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Prefix, { children: prefix }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Input, __spreadValues({}, props))
-  ] });
-}
 export {
   Avatar2 as Avatar,
   Box,
   Button,
   Heading,
   Text,
-  TextInput
+  TextArea
 };
 /*! Bundled license information:
 
