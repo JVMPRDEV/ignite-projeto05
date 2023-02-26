@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
 import { Avatar, AvatarProps } from '@ignite-ui/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
   title: 'Data display/Avatar',
@@ -7,6 +7,13 @@ export default {
   args: {
     src: 'https://github.com/JVMPRDEV.png',
     alt: 'João Victor Macedo',
+  },
+  argTypes: {
+    srcSet: {
+      control: {
+        type: 'text',
+      },
+    },
   },
 } as Meta<AvatarProps>
 
