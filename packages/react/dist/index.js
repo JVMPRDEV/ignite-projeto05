@@ -1302,7 +1302,7 @@ var require_react_development = __commonJS({
           }
           return lazyType;
         }
-        function forwardRef(render) {
+        function forwardRef2(render) {
           {
             if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
               error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
@@ -2199,7 +2199,7 @@ var require_react_development = __commonJS({
         exports.createElement = createElement$1;
         exports.createFactory = createFactory;
         exports.createRef = createRef;
-        exports.forwardRef = forwardRef;
+        exports.forwardRef = forwardRef2;
         exports.isValidElement = isValidElement;
         exports.lazy = lazy;
         exports.memo = memo;
@@ -3170,7 +3170,15 @@ __export(src_exports, {
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
-  TextInput: () => TextInput
+  TextInput: () => TextInput,
+  config: () => config,
+  createTheme: () => createTheme,
+  css: () => css,
+  getCssText: () => getCssText,
+  globalCss: () => globalCss,
+  keyframes: () => keyframes,
+  styled: () => styled,
+  theme: () => theme
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -3456,6 +3464,9 @@ var Button = styled("button", {
 });
 Button.displayName = "Button";
 
+// src/components/TextInput/index.tsx
+var import_react2 = __toESM(require_react());
+
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
   backgroundColor: "$gray900",
@@ -3509,13 +3520,15 @@ var Input = styled("input", {
 
 // src/components/TextInput/index.tsx
 var import_jsx_runtime2 = __toESM(require_jsx_runtime());
-function TextInput(_a) {
-  var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Prefix, { children: prefix }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Input, __spreadValues({}, props))
-  ] });
-}
+var TextInput = (0, import_react2.forwardRef)(
+  (_a, ref) => {
+    var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(TextInputContainer, { children: [
+      !!prefix && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Prefix, { children: prefix }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Input, __spreadValues({ ref }, props))
+    ] });
+  }
+);
 TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
@@ -3660,7 +3673,15 @@ MultiStep.displayName = "MultiStep";
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  config,
+  createTheme,
+  css,
+  getCssText,
+  globalCss,
+  keyframes,
+  styled,
+  theme
 });
 /*! Bundled license information:
 
