@@ -1,5 +1,11 @@
 # @jvmpr-dev/tokens
 
+## 3.0.0
+
+### Major Changes
+
+- Add ney test color
+
 ## 2.0.0
 
 ### Major Changes
