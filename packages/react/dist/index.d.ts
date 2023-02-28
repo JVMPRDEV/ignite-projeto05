@@ -1,9 +1,12 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as react from 'react';
-import { ComponentProps, ElementType } from 'react';
+import { ComponentProps as ComponentProps$1, ElementType, ReactNode } from 'react';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
+import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+import { ComponentProps as ComponentProps$2 } from '@stitches/react';
+import * as Toast$1 from '@radix-ui/react-toast';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
@@ -211,7 +214,7 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface BoxProps extends ComponentProps<typeof Box> {
+interface BoxProps extends ComponentProps$1<typeof Box> {
     as?: ElementType;
 }
 
@@ -419,7 +422,7 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface TextProps extends ComponentProps<typeof Text> {
+interface TextProps extends ComponentProps$1<typeof Text> {
     as?: ElementType;
 }
 
@@ -627,7 +630,7 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface HeadingProps extends ComponentProps<typeof Heading> {
+interface HeadingProps extends ComponentProps$1<typeof Heading> {
     as?: ElementType;
 }
 
@@ -834,7 +837,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
     zIndex: "zIndices";
 }, {}>>;
 
-interface AvatarProps extends ComponentProps<typeof AvatarImage> {
+interface AvatarProps extends ComponentProps$1<typeof AvatarImage> {
 }
 declare function Avatar(props: AvatarProps): JSX.Element;
 declare namespace Avatar {
@@ -1046,7 +1049,7 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface ButtonProps extends ComponentProps<typeof Button> {
+interface ButtonProps extends ComponentProps$1<typeof Button> {
     as?: ElementType;
 }
 
@@ -1253,7 +1256,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
     zIndex: "zIndices";
 }, {}>>;
 
-interface TextInputProps extends ComponentProps<typeof Input> {
+interface TextInputProps extends ComponentProps$1<typeof Input> {
     prefix?: string;
 }
 declare const TextInput: react.ForwardRefExoticComponent<Omit<TextInputProps, "ref"> & react.RefAttributes<HTMLInputElement>>;
@@ -1460,7 +1463,7 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface TextAreaProps extends ComponentProps<typeof TextArea> {
+interface TextAreaProps extends ComponentProps$1<typeof TextArea> {
 }
 
 declare const CheckboxContainer: _stitches_react_types_styled_component.StyledComponent<react.ForwardRefExoticComponent<Checkbox$1.CheckboxProps & react.RefAttributes<HTMLButtonElement>>, {}, {}, _stitches_react_types_css_util.CSS<{}, {
@@ -1666,7 +1669,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
     zIndex: "zIndices";
 }, {}>>;
 
-interface CheckboxProps extends ComponentProps<typeof CheckboxContainer> {
+interface CheckboxProps extends ComponentProps$1<typeof CheckboxContainer> {
 }
 declare function Checkbox(props: CheckboxProps): JSX.Element;
 declare namespace Checkbox {
@@ -1679,6 +1682,230 @@ interface MultiStepProps {
 }
 declare function MultiStep({ size, currentStep }: MultiStepProps): JSX.Element;
 declare namespace MultiStep {
+    var displayName: string;
+}
+
+type ComponentProps<T> = ComponentProps$2<T> & {
+    as: ElementType;
+};
+
+type TooltipProps = ComponentProps<typeof TooltipPrimitive.Root> & {
+    content: string | ReactNode;
+};
+declare function Tooltip({ content, children, ...props }: TooltipProps): JSX.Element;
+declare namespace Tooltip {
+    var displayName: string;
+}
+
+declare const ToastRoot: _stitches_react_types_styled_component.StyledComponent<react.ForwardRefExoticComponent<Toast$1.ToastProps & react.RefAttributes<HTMLLIElement>>, {}, {}, _stitches_react_types_css_util.CSS<{}, {
+    colors: {
+        white: string;
+        black: string;
+        gray100: string;
+        gray200: string;
+        gray400: string;
+        gray500: string;
+        gray600: string;
+        gray700: string;
+        gray800: string;
+        gray900: string;
+        ignite300: string;
+        ignite500: string;
+        ignite700: string;
+        ignite900: string;
+        test: string;
+    };
+    fontSizes: {
+        xxs: string;
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+        '2xl': string;
+        '4xl': string;
+        '5xl': string;
+        '6xl': string;
+        '7xl': string;
+        '8xl': string;
+    };
+    fontWeights: {
+        regular: string;
+        medium: string;
+        bold: string;
+    };
+    fonts: {
+        default: string;
+        code: string;
+    };
+    lineHeights: {
+        shorter: string;
+        short: string;
+        base: string;
+        tall: string;
+    };
+    radii: {
+        px: string;
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        full: string;
+    };
+    space: {
+        1: string;
+        2: string;
+        3: string;
+        4: string;
+        5: string;
+        6: string;
+        7: string;
+        8: string;
+        10: string;
+        12: string;
+        16: string;
+        20: string;
+        40: string;
+        64: string;
+        80: string;
+    };
+}, {
+    height: "space";
+    width: "space";
+    gap: "space";
+    gridGap: "space";
+    columnGap: "space";
+    gridColumnGap: "space";
+    rowGap: "space";
+    gridRowGap: "space";
+    inset: "space";
+    insetBlock: "space";
+    insetBlockEnd: "space";
+    insetBlockStart: "space";
+    insetInline: "space";
+    insetInlineEnd: "space";
+    insetInlineStart: "space";
+    margin: "space";
+    marginTop: "space";
+    marginRight: "space";
+    marginBottom: "space";
+    marginLeft: "space";
+    marginBlock: "space";
+    marginBlockEnd: "space";
+    marginBlockStart: "space";
+    marginInline: "space";
+    marginInlineEnd: "space";
+    marginInlineStart: "space";
+    padding: "space";
+    paddingTop: "space";
+    paddingRight: "space";
+    paddingBottom: "space";
+    paddingLeft: "space";
+    paddingBlock: "space";
+    paddingBlockEnd: "space";
+    paddingBlockStart: "space";
+    paddingInline: "space";
+    paddingInlineEnd: "space";
+    paddingInlineStart: "space";
+    scrollMargin: "space";
+    scrollMarginTop: "space";
+    scrollMarginRight: "space";
+    scrollMarginBottom: "space";
+    scrollMarginLeft: "space";
+    scrollMarginBlock: "space";
+    scrollMarginBlockEnd: "space";
+    scrollMarginBlockStart: "space";
+    scrollMarginInline: "space";
+    scrollMarginInlineEnd: "space";
+    scrollMarginInlineStart: "space";
+    scrollPadding: "space";
+    scrollPaddingTop: "space";
+    scrollPaddingRight: "space";
+    scrollPaddingBottom: "space";
+    scrollPaddingLeft: "space";
+    scrollPaddingBlock: "space";
+    scrollPaddingBlockEnd: "space";
+    scrollPaddingBlockStart: "space";
+    scrollPaddingInline: "space";
+    scrollPaddingInlineEnd: "space";
+    scrollPaddingInlineStart: "space";
+    top: "space";
+    right: "space";
+    bottom: "space";
+    left: "space";
+    fontSize: "fontSizes";
+    background: "colors";
+    backgroundColor: "colors";
+    backgroundImage: "colors";
+    borderImage: "colors";
+    border: "colors";
+    borderBlock: "colors";
+    borderBlockEnd: "colors";
+    borderBlockStart: "colors";
+    borderBottom: "colors";
+    borderBottomColor: "colors";
+    borderColor: "colors";
+    borderInline: "colors";
+    borderInlineEnd: "colors";
+    borderInlineStart: "colors";
+    borderLeft: "colors";
+    borderLeftColor: "colors";
+    borderRight: "colors";
+    borderRightColor: "colors";
+    borderTop: "colors";
+    borderTopColor: "colors";
+    caretColor: "colors";
+    color: "colors";
+    columnRuleColor: "colors";
+    outline: "colors";
+    outlineColor: "colors";
+    fill: "colors";
+    stroke: "colors";
+    textDecorationColor: "colors";
+    fontFamily: "fonts";
+    fontWeight: "fontWeights";
+    lineHeight: "lineHeights";
+    letterSpacing: "letterSpacings";
+    blockSize: "sizes";
+    minBlockSize: "sizes";
+    maxBlockSize: "sizes";
+    inlineSize: "sizes";
+    minInlineSize: "sizes";
+    maxInlineSize: "sizes";
+    minWidth: "sizes";
+    maxWidth: "sizes";
+    minHeight: "sizes";
+    maxHeight: "sizes";
+    flexBasis: "sizes";
+    gridTemplateColumns: "sizes";
+    gridTemplateRows: "sizes";
+    borderWidth: "borderWidths";
+    borderTopWidth: "borderWidths";
+    borderLeftWidth: "borderWidths";
+    borderRightWidth: "borderWidths";
+    borderBottomWidth: "borderWidths";
+    borderStyle: "borderStyles";
+    borderTopStyle: "borderStyles";
+    borderLeftStyle: "borderStyles";
+    borderRightStyle: "borderStyles";
+    borderBottomStyle: "borderStyles";
+    borderRadius: "radii";
+    borderTopLeftRadius: "radii";
+    borderTopRightRadius: "radii";
+    borderBottomRightRadius: "radii";
+    borderBottomLeftRadius: "radii";
+    boxShadow: "shadows";
+    textShadow: "shadows";
+    transition: "transitions";
+    zIndex: "zIndices";
+}, {}>>;
+
+type ToastProps = ComponentProps<typeof ToastRoot> & {
+    title: string;
+    description?: string;
+};
+declare function Toast({ title, description, ...props }: ToastProps): JSX.Element;
+declare namespace Toast {
     var displayName: string;
 }
 
@@ -3374,4 +3601,4 @@ declare const config: {
     utils: {};
 };
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps, Tooltip, TooltipProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
