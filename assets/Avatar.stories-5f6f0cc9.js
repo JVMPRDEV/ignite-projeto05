@@ -1,0 +1,2 @@
+import{A as t}from"./index-8b8eb184.js";import"./index-2ed84c34.js";import"./iframe-acaea73d.js";import"./index-f5910208.js";import"./jsx-runtime-1280c692.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/JVMPRDEV.png",alt:"João Victor Macedo"},argTypes:{srcSet:{control:{type:"text"}}}},p={},e={args:{src:void 0}},m=["Primary","WithFallback"];export{p as Primary,e as WithFallback,m as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories-5f6f0cc9.js.map
